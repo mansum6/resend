@@ -1,8 +1,9 @@
 import os, streamlit as st
 from resend import Resend
+import resend
 
 # Provide the Resend API key
-client = Resend(api_key=os.environ["RESEND_API_KEY"])
+client = Resend(api_key=os.environ["re_jFPy5iSs_4uBTFPcoHF4XwfBriUNyZyy9"])
 
 # Set up the Streamlit app
 st.subheader("Send Email")
