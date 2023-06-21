@@ -5,6 +5,17 @@ import resend
 # Provide the Resend API key
 client = Resend(api_key=os.environ["re_jFPy5iSs_4uBTFPcoHF4XwfBriUNyZyy9"])
 
+resend.api_key = os.environ["RESEND_API_KEY"]
+
+params = {
+    "from": "onboarding@resend.dev",
+    "to": "delivered@resend.dev",
+    "subject": "hello world",
+    "html": "<strong>it works!</strong>",
+}
+
+
+
 # Set up the Streamlit app
 st.subheader("Send Email")
 email_from = st.text_input("From:", "")
@@ -18,10 +29,6 @@ if st.button("Submit"):
         st.error('Please provide the missing fields.')
     else:
         with st.spinner():
-            client.send_email(
-                to=email_to, 
-                sender=email_from, 
-                subject=email_subject, 
-                text=email_body
-                )
+            #client.send_email(to=email_to, sender=email_from,subject=email_subject, text=email_body)
+            email = resend.Emails.send(params)
             st.success(f"Email sent!")
