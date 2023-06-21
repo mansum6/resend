@@ -25,7 +25,7 @@ st.subheader("Send Email")
 
 # Send email using Resend
 if st.button("Submit"):
-    if not email_from or not email_to or not email_subject or not email_body:
+    if not email_from or not email_subject or not email_body:
         st.error('Please provide the missing fields.')
     else:
         with st.spinner():
