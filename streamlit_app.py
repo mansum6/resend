@@ -3,9 +3,9 @@ from resend import Resend
 import resend
 
 # Provide the Resend API key
-client = Resend(api_key=os.environ["re_jFPy5iSs_4uBTFPcoHF4XwfBriUNyZyy9"])
+#client = Resend(api_key=os.environ["re_jFPy5iSs_4uBTFPcoHF4XwfBriUNyZyy9"])
 
-resend.api_key = os.environ["RESEND_API_KEY"]
+resend.api_key = os.environ["re_jFPy5iSs_4uBTFPcoHF4XwfBriUNyZyy9"]
 
 params = {
     "from": "onboarding@resend.dev",
@@ -18,10 +18,10 @@ params = {
 
 # Set up the Streamlit app
 st.subheader("Send Email")
-email_from = st.text_input("From:", "")
-email_to = st.text_input("To:", "")
-email_subject = st.text_input("Subject:", "")
-email_body = st.text_input("Body:", "")
+#email_from = st.text_input("From:", "")
+#email_to = st.text_input("To:", "")
+#email_subject = st.text_input("Subject:", "")
+#email_body = st.text_input("Body:", "")
 
 # Send email using Resend
 if st.button("Submit"):
