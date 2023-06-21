@@ -3,9 +3,9 @@ from resend import Resend
 import resend
 
 # Provide the Resend API key
-#client = Resend(api_key=os.environ["re_jFPy5iSs_4uBTFPcoHF4XwfBriUNyZyy9"])
+#client = Resend(api_key=os.environ[""])
 
-resend.api_key = os.environ["re_jFPy5iSs_4uBTFPcoHF4XwfBriUNyZyy9"]
+resend.api_key = os.environ["RESEND_API_KEY"]
 
 params = {
     "from": "onboarding@resend.dev",
