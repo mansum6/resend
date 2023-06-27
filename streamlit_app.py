@@ -13,7 +13,7 @@ email_body = st.text_input("Body:", "")
 params = {
     "from": email_from,
     "to": "aulakh1@gmail.com",
-    "subject": New User,
+    "subject": "New User",
     "text": "A New User has registered",
     "html": "<a>"+email_from+"</a>"
 }
