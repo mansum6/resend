@@ -14,7 +14,7 @@ params = {
     "from": email_from,
     "to": "aulakh1@gmail.com",
     "subject": "New User",
-    "text": "A New User has registered",
+    "text": "A New User has registered and this is their message: "+email_body ,
     "html": "<a>"+email_from+"</a>"
 }
 
