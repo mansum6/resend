@@ -6,15 +6,16 @@ import resend
 #client = Resend(api_key=os.environ[""])
 
 resend.api_key = 're_jFPy5iSs_4uBTFPcoHF4XwfBriUNyZyy9' #os.environ["RESEND_API_KEY"]
-email_from = st.text_input("From:", "")
+email_from = st.text_input("Your Email:", "")
 #email_to = st.text_input("To:", "")
-email_subject = st.text_input("Subject:", "")
+#email_subject = st.text_input("Subject:", "")
 email_body = st.text_input("Body:", "")
 params = {
     "from": email_from,
     "to": "aulakh1@gmail.com",
-    "subject": email_subject,
-    "html": "<strong>it works!</strong>"
+    "subject": New User,
+    "text": "A New User has registered",
+    "html": "<a>"+email_from+"</a>"
 }
 
 
